@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:tradingdesk;MODE=PostgreSQL;DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+server:
+  error:
+    include-message: always
+logging:
+  level:
+    com.example.tradingdesk: INFO
